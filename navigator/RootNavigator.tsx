@@ -5,7 +5,7 @@ import TabNavigator from './TabNavigator';
 
 export type RootStackParamList = {
     Main: undefined;
-    MyMode: {userId: string; name: string}
+    MyModal: {userId: string; name: string}
     Order: { order: any}
 }
 
@@ -15,14 +15,8 @@ const RootNavigator = () => {
     return (
         <RootStack.Navigator>
             <RootStack.Group>
-                <RootStack.Screen name="Main" component={TabNavigator}>
-                    {() => (
-                        <View>
-                            <Text>CustomerScreen</Text>
-                        </View>
-                    )}
-                </RootStack.Screen>
-
+                <RootStack.Screen  name="main"  component={TabNavigator}/> 
+                
             </RootStack.Group>
         </RootStack.Navigator>
     );
