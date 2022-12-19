@@ -31,11 +31,13 @@ const CustomersScreen = () => {
 
   return (
     <ScrollView style={{backgroundColor: #59c1cc}} >
+     
       <Image 
       source={{uri: 'https://links.papareact.com/3jc'}}  
       containerStyle={tailWind("w-full h-64")}
       PlaceholderContent={<ActivityIndicator />}
       />
+
       <Input 
       placeholder="Search by Customer"
       value={input}
