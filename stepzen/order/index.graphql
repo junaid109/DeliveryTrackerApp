@@ -9,9 +9,14 @@ type Order {
   Lng: Float
   trackingItems: TrackingItems
     @materializer {
-      query: ""
-      arguments: [{ name: "trackingId", value: "$trackingId" }]
+      name: "getTrackingItemsById"
+      arguments: [{ name: "id", fieldId: "trackingId" }]
     }
+}
+
+type OrderList{
+  name: ID
+  value: Order
 }
 
 type Query {
